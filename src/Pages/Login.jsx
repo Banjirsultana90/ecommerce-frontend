@@ -3,7 +3,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import toast, { Toaster } from 'react-hot-toast';
 import Sociallogin from './Sociallogin';
-import { AuthContext } from '../components/provider/AuthProvider';
+import { AuthContext } from '../Components/provider/Authprovider';
+
 
 
 const Login = () => {
