@@ -8,6 +8,7 @@ import Mypostedjob from "../Pages/Mypostedjob";
 import Bidrequest from "../Pages/Bidrequest";
 import Mybids from "../Pages/Mybids";
 import Home from "../Components/Home/Home";
+import Jobdetails from "../Pages/Jobdetails";
 
 const router = createBrowserRouter([
     {
@@ -17,10 +18,11 @@ const router = createBrowserRouter([
       children:[
 
         {
-            path:'/home',
+            path:'/',
             element:<Home></Home>
 
         },
+       
         {
             path:'/login',
             element:<Login></Login>
@@ -52,6 +54,12 @@ const router = createBrowserRouter([
 
         }
       ]
+    },
+    {
+        path:'/jobs/:id',
+        element:<Jobdetails></Jobdetails>
+       
+
     },
   ]);
   export default router
