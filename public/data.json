@@ -1,81 +1,98 @@
 [
-
-   
-      { "jobCategory":"webDevelopment",
-        "jobTitle": "Front-End Developer",
-        "deadline": "2023-12-15",
-        "priceRange": "$50 - $70 per hour",
-        "shortDescription": "Looking for a skilled front-end developer to work on a responsive web application."
-      },
-      { "jobCategory":"webDevelopment",
-        "jobTitle": "Full-Stack Engineer",
-        "deadline": "2023-11-30",
-        "priceRange": "$60 - $80 per hour",
-        "shortDescription": "We need an experienced full-stack engineer to develop and maintain our web platform."
-      },
-      { "jobCategory":"webDevelopment",
-        "jobTitle": "UI/UX Designer",
-        "deadline": "2023-12-10",
-        "priceRange": "$45 - $65 per hour",
-        "shortDescription": "Seeking a talented UI/UX designer to improve the user interface of our website."
-      },
-      { "jobCategory":"webDevelopment",
-        "jobTitle": "Backend Developer",
-        "deadline": "2023-11-25",
-        "priceRange": "$55 - $75 per hour",
-        "shortDescription": "Join our team as a backend developer to optimize our server infrastructure."
-      }
-    ,
-      { "jobCategory":"digitalMarketing",
-        "jobTitle": "Social Media Manager",
-        "deadline": "2023-12-05",
-        "priceRange": "$40,000 - $60,000 per year",
-        "shortDescription": "We're looking for a social media manager to create engaging content and manage our social accounts."
-      },
-      { "jobCategory":"digitalMarketing",
-        "jobTitle": "SEO Specialist",
-        "deadline": "2023-11-28",
-        "priceRange": "$50,000 - $70,000 per year",
-        "shortDescription": "Join our team as an SEO specialist to improve our website's search engine ranking."
-      },
-      { "jobCategory":"digitalMarketing",
-        "jobTitle": "Content Marketing Manager",
-        "deadline": "2023-12-10",
-        "priceRange": "$45,000 - $65,000 per year",
-        "shortDescription": "Seeking a content marketing manager to create and execute content strategies."
-      },
-      { "jobCategory":"digitalMarketing",
-        "jobTitle": "Email Marketing Coordinator",
-        "deadline": "2023-11-25",
-        "priceRange": "$35,000 - $55,000 per year",
-        "shortDescription": "Coordinate and execute email marketing campaigns for our clients."
-      },
-    
-   
-      { "jobCategory":"graphicDesign",
-        "jobTitle": "Graphic Designer",
-        "deadline": "2023-12-15",
-        "priceRange": "$40,000 - $60,000 per year",
-        "shortDescription": "Join our team as a graphic designer to create visually appealing marketing materials."
-      },
-      { "jobCategory":"graphicDesign",
-        "jobTitle": "Illustrator",
-        "deadline": "2023-11-30",
-        "priceRange": "$45,000 - $65,000 per year",
-        "shortDescription": "We're looking for an illustrator to design unique artwork for our projects."
-      },
-      { "jobCategory":"graphicDesign",
-        "jobTitle": "UI/UX Designer",
-        "deadline": "2023-12-05",
-        "priceRange": "$50,000 - $70,000 per year",
-        "shortDescription": "Seeking a UI/UX designer to enhance the user experience of our applications."
-      },
-      { "jobCategory":"graphicDesign",
-        "jobTitle": "Packaging Designer",
-        "deadline": "2023-11-28",
-        "priceRange": "$35,000 - $55,000 per year",
-        "shortDescription": "Design packaging materials for various products and brands."
-      }
-    
-    ]
-  
+  { 
+    "jobCategory": "webDevelopment",
+    "jobTitle": "Front-End Developer",
+    "deadline": "2023-12-15",
+    "priceRange": "$50 - $70 per hour",
+    "shortDescription": "Looking for a skilled front-end developer to work on a responsive web application.",
+    "email": "buyer1@example.com"
+  },
+  { 
+    "jobCategory": "webDevelopment",
+    "jobTitle": "Full-Stack Engineer",
+    "deadline": "2023-11-30",
+    "priceRange": "$60 - $80 per hour",
+    "shortDescription": "We need an experienced full-stack engineer to develop and maintain our web platform.",
+    "email": "buyer2@example.com"
+  },
+  { 
+    "jobCategory": "webDevelopment",
+    "jobTitle": "UI/UX Designer",
+    "deadline": "2023-12-10",
+    "priceRange": "$45 - $65 per hour",
+    "shortDescription": "Seeking a talented UI/UX designer to improve the user interface of our website.",
+    "email": "buyer3@example.com"
+  },
+  { 
+    "jobCategory": "webDevelopment",
+    "jobTitle": "Backend Developer",
+    "deadline": "2023-11-25",
+    "priceRange": "$55 - $75 per hour",
+    "shortDescription": "Join our team as a backend developer to optimize our server infrastructure.",
+    "email": "buyer4@example.com"
+  },
+  { 
+    "jobCategory": "digitalMarketing",
+    "jobTitle": "Social Media Manager",
+    "deadline": "2023-12-05",
+    "priceRange": "$40,000 - $60,000 per year",
+    "shortDescription": "We're looking for a social media manager to create engaging content and manage our social accounts.",
+    "email": "buyer5@example.com"
+  },
+  { 
+    "jobCategory": "digitalMarketing",
+    "jobTitle": "SEO Specialist",
+    "deadline": "2023-11-28",
+    "priceRange": "$50,000 - $70,000 per year",
+    "shortDescription": "Join our team as an SEO specialist to improve our website's search engine ranking.",
+    "email": "buyer6@example.com"
+  },
+  { 
+    "jobCategory": "digitalMarketing",
+    "jobTitle": "Content Marketing Manager",
+    "deadline": "2023-12-10",
+    "priceRange": "$45,000 - $65,000 per year",
+    "shortDescription": "Seeking a content marketing manager to create and execute content strategies.",
+    "email": "buyer7@example.com"
+  },
+  { 
+    "jobCategory": "digitalMarketing",
+    "jobTitle": "Email Marketing Coordinator",
+    "deadline": "2023-11-25",
+    "priceRange": "$35,000 - $55,000 per year",
+    "shortDescription": "Coordinate and execute email marketing campaigns for our clients.",
+    "email": "buyer8@example.com"
+  },
+  { 
+    "jobCategory": "graphicDesign",
+    "jobTitle": "Graphic Designer",
+    "deadline": "2023-12-15",
+    "priceRange": "$40,000 - $60,000 per year",
+    "shortDescription": "Join our team as a graphic designer to create visually appealing marketing materials.",
+    "email": "buyer9@example.com"
+  },
+  { 
+    "jobCategory": "graphicDesign",
+    "jobTitle": "Illustrator",
+    "deadline": "2023-11-30",
+    "priceRange": "$45,000 - $65,000 per year",
+    "shortDescription": "We're looking for an illustrator to design unique artwork for our projects.",
+    "email": "buyer10@example.com"
+  },
+  { 
+    "jobCategory": "graphicDesign",
+    "jobTitle": "UI/UX Designer",
+    "deadline": "2023-12-05",
+    "priceRange": "$50,000 - $70,000 per year",
+    "shortDescription": "Seeking a UI/UX designer to enhance the user experience of our applications.",
+    "email": "buyer11@example.com"
+  },
+  { 
+    "jobCategory": "graphicDesign",
+    "jobTitle": "Packaging Designer",
+    "deadline": "2023-11-28",
+    "priceRange": "$35,000 - $55,000 per year",
+    "shortDescription": "Design packaging materials for various products and brands.",
+    "email": "buyer12@example.com"
+  }
+]

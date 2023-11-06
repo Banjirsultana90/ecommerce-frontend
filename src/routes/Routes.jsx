@@ -22,7 +22,13 @@ const router = createBrowserRouter([
             element:<Home></Home>
 
         },
-       
+        {
+            path:'/jobs/:id',
+            element:<Jobdetails></Jobdetails>,
+            loader:()=>fetch('http://localhost:5000/categories')
+           
+    
+        },
         {
             path:'/login',
             element:<Login></Login>
@@ -55,11 +61,6 @@ const router = createBrowserRouter([
         }
       ]
     },
-    {
-        path:'/jobs/:id',
-        element:<Jobdetails></Jobdetails>
-       
-
-    },
+   
   ]);
   export default router
