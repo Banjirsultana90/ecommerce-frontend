@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 
         },
         {
-            path:'/jobs/:id',
+            path:'/jobs/:id', 
             element:<Jobdetails></Jobdetails>,
             loader:()=>fetch('http://localhost:5000/categories')
            

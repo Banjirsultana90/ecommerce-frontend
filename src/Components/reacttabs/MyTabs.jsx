@@ -10,7 +10,7 @@ const MyTabs = () => {
     const [selectedCategory, setSelectedCategory] = useState("webDevelopment");
 
     useEffect(() => {
-       
+        // Fetch job data from your API when the component mounts
         fetch('http://localhost:5000/categories')
             .then((res) => res.json())
             .then((data) => setJobs(data));
