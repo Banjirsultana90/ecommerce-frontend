@@ -17,7 +17,7 @@ const MyTabs = () => {
     }, []); 
 
     return (
-        <div>
+        <div >
             <Tabs>
                 <TabList>
                     <Tab onClick={() => setSelectedCategory("webDevelopment")}>Web Development</Tab>
@@ -42,7 +42,7 @@ const MyTabs = () => {
         const filteredJobs = jobs.filter((job) => job.jobCategory === category);
 
         return (
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-5'>
                 {filteredJobs.map((job, index) => (
                     <div key={job._id} className={`card w-96 bg-${job.color} shadow-xl`}>
                         <div className="card-body">

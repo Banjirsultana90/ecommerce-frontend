@@ -35,16 +35,16 @@ const Mypostedjob = () => {
 
     return (
         <>
-            <h3>{addedjob.length}</h3>
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto p-10">
             {jobs.map((job) => (
-                <div key={job._id} className="card w-96 bg-base-100 shadow-xl">
+                <div key={job._id} className="card w-96 bg-base-100 shadow-xl  ">
                     <div className="card-body">
                         <h2>{job.email}</h2>
                         <h2 className="card-title">{job.jobTitle}</h2>
                         <p>{job.deadline}</p>
                         <p>{job.shortDescription}</p>
                         <p>{job.jobCategory}</p>
-                        <p>{job.maximumprice}</p>
+                        <p>{job.maximumprice}</p> 
                         <p>{job.minimumprice}</p>
                         <div className="card-actions justify-end">
                             {user?.email === job.email && (
@@ -64,6 +64,8 @@ const Mypostedjob = () => {
                     </div>
                 </div>
             ))}
+            </div>
+            
             <Toaster />
         </>
     );

@@ -59,12 +59,14 @@ const router = createBrowserRouter([
         },
         {
             path:'/mybids',
-            element:<Mybids></Mybids>
+            element:<Mybids></Mybids>,
+            loader:()=>fetch('http://localhost:5000/bidedjobs')
 
         },
         {
             path:'/bidrequest',
-            element:<Bidrequest></Bidrequest>
+            element:<Bidrequest></Bidrequest>,
+            loader:()=>fetch('http://localhost:5000/bidedjobs')
 
         }
       ]
