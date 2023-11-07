@@ -8,18 +8,26 @@ const Mypostedjob = () => {
     const addedjob=useLoaderData()
     const [jobs,setJobs]=useState(addedjob)
     const handledelete=id=>{
-        fetch(`https://y-1lm0ucbjk-banjir-sultanas-projects.vercel.app/cart/${id}`,{
-            method: "DELETE"
+        const proceed=confirm('are you sure you want to delete')
+        if(proceed){
+            fetch(`http://localhost:5000/addedjobs/${id}`,{
+                method: "DELETE"
+            })
+            .then((res)=>res.json())
+            .then((data)=>{
+                if(data.deletedCount>0){
+                    toast.success('data deleted successfully')
+                    const remaining=jobs.filter(job=>job._id !==id)
+                    setJobs(remaining)
+                }
+        
+       
         })
-        .then((res)=>res.json())
-        .then((data)=>{
-            if(data.deletedCount>0){
-                toast.success('data deleted successfully')
-                const remaining=jobs.filter(job=>job._id !==id)
-                setJobs(remaining)
-            }
-        })}
-    // console.log(addedjob)
+    }
+    
+    }
+
+
     return (
        
 
