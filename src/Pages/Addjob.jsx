@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Addjob = () => {
     const navigate = useNavigate()
-    const {  user } = useContext(AuthContext);
+    const {  user ,email} = useContext(AuthContext);
     const handleadd= event => {
         event.preventDefault();
         const form =event.target
@@ -24,7 +24,7 @@ const Addjob = () => {
         
         
      
-         fetch('http://localhost:5000/categories',{
+         fetch('http://localhost:5000/addedjobs',{
              method:'POST',
              headers:{
                "content-type":'application/json'
