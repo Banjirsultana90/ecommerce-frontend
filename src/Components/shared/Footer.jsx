@@ -2,7 +2,7 @@ import React from 'react';
 import img1 from '../../assets/branding-identity-corporate-people-point-logo-vector-design-template_460848-14010.jpg'
 const Footer = () => {
     return (
-        <footer className="footer fixed bottom-0 items-center p-4 bg-black text-neutral-content ">
+        <footer className="footer items-center p-4 bg-black text-neutral-content ">
             <aside className="items-center grid-flow-col">
             <img className="rounded-full h-10 w-10 bg-slate-300" src={img1} alt="" />
                 <p>Copyright © 2023 - All right reserved</p>

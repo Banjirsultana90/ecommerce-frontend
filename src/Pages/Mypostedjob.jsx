@@ -35,7 +35,7 @@ const Mypostedjob = () => {
 
     return (
         <>
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-auto p-10">
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto p-10">
             {jobs.map((job) => (
                 <div key={job._id} className="card w-96 bg-base-100 shadow-xl  ">
                     <div className="card-body">
