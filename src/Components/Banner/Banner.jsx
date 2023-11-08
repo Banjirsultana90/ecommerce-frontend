@@ -24,7 +24,7 @@ const Banner = () => {
                 <img src={img2} className="w-full" />
                 <div className="absolute h-full flex items-center justify-center  top-0  bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]">
                     <div className=' text-white space-y-7 w-1/2 pl-4'>
-                        <h2 className='text-7xl  '>Bid Your job in One</h2>
+                        <h2 className='text-7xl  '>Bid Your job in One Click</h2>
                         
 
                     </div>
