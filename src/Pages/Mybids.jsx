@@ -11,7 +11,7 @@ const Mybids = () => {
 
     return (
         <>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto my-5">
                 <table className="table table-xs">
                     <thead>
                         <tr>
@@ -32,14 +32,14 @@ const Mybids = () => {
                                 <td>{bid.deadline}</td>
                                 <td>{bid.status || 'Pending'}</td> {/* Display 'Pending' if status is not set */}
                                 <td>
-                                    {bid.status === 'Pending' && (
+                                    {/* {bid.status === 'Pending' && (
                                         <button
                                             className='btn'
                                             onClick={() => handleCompleteClick(bid._id)}
                                         >
                                             Complete
                                         </button>
-                                    )}
+                                    )} */}
                                 </td>
                             </tr>
                         ))}
