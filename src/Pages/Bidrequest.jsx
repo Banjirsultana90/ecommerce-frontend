@@ -43,6 +43,8 @@ const Bidrequests = () => {
                             <th>Price</th>
                             <th>Status</th>
                             <th>Actions</th>
+
+
                         </tr>
                     </thead>
                     <tbody>
@@ -54,6 +56,9 @@ const Bidrequests = () => {
                                 <td>{request.deadline}</td>
                                 <td>{request.price}</td>
                                 <td>{request.status}</td>
+                                <td>{request.status}</td>
+                                <td><button>Accept</button></td>
+                                <td><button>Reject</button></td>
                                 <td>
                                     {request.status === 'Pending' && (
                                         <>
