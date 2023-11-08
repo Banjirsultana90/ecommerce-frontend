@@ -168,11 +168,13 @@ const Updatejob = () => {
         };
         if (user?.email ===jobs.email) {
 
-            fetch(`http://localhost:5000/addedjobs/${_id}`, {
+            fetch(`http://localhost:5000/addedjobs/${_id}`,{credentials:'include'} ,{
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
                 },
+
+                
                 body: JSON.stringify(updatedjob),
             })
                 .then((res) => res.json())

@@ -2,6 +2,7 @@ import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged,
 // eslint-disable-next-line no-unused-vars
 import  { createContext, useEffect, useState } from 'react';
 import auth from '../firebase/firebase.config';
+import axios from 'axios';
 
 
 
@@ -43,18 +44,73 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, currentuser =>
+    //          {
+    //             const userEmail=currentuser?.email || user.email
+    //             const loggeduser={email:userEmail}
+    //             setuser(currentuser)
+    //         console.log('user in the auth state changed', currentuser);
+          
+    //         setloading(false)
+    //         if (currentuser){
+              
+    //             axios.post('http://localhost:5000/jwt',
+    //             loggeduser,{withCredentials:true})
+    //             .then(res=>{
+    //                 console.log ('token ressss',res.data)
+    //             })
+
+    //         }
+    //         else{
+    //             axios.post('http://localhost:5000/logout',
+    //             loggeduser,
+    //             {
+    //                 withCredentials:true
+    //             }
+    //             )
+    //             .then(res=>{
+    //                 console.log(res.data);
+    //             })
+    //         }
+    //     })
+    //     return () => {
+    //         unsubscribe()
+    //     }
+    // }, [])
+
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, currentuser => {
+        const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
+            const userEmail = currentuser?.email;
+                const loggeduser = { email: userEmail };
+            setuser(currentuser);
+
             console.log('user in the auth state changed', currentuser);
-            setuser(currentuser)
-            setloading(false)
-        })
+            setloading(false);
+    
+            if (currentuser) {
+                
+                axios
+                    .post('http://localhost:5000/jwt', loggeduser, { withCredentials: true })
+                    .then((res) => {
+                        console.log( res.data);
+                    });
+            } else {
+                axios
+                    .post('http://localhost:5000/logout', loggeduser, {
+                        withCredentials: true,
+                    })
+                    .then((res) => {
+                        console.log(res.data);
+                    });
+            }
+        });
+    
         return () => {
-            unsubscribe()
-        }
-    }, [])
-
-
+            unsubscribe();
+        };
+    }, []);
+    
     const authinfo = {
         googlelogin,
         createuser, user, loading, handleupdateprofile, signin, logout
