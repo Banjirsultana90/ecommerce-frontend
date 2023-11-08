@@ -13,7 +13,7 @@
     "deadline": "2023-11-30",
     "priceRange": "$60,000 - $80,000 per year",
     "shortDescription": "We need an experienced full-stack engineer to develop and maintain our web platform.",
-    "buyeremail": "buyer2@example.com"
+    "buyeremail": "buyer1@example.com"
   },
   {
     "jobCategory": "webDevelopment",
@@ -21,7 +21,7 @@
     "deadline": "2023-12-10",
     "priceRange": "$45,000 - $65,000 per year",
     "shortDescription": "Seeking a talented UI/UX designer to improve the user interface of our website.",
-    "buyeremail": "buyer3@example.com"
+    "buyeremail": "buyer1@example.com"
   },
   {
     "jobCategory": "webDevelopment",
@@ -29,7 +29,7 @@
     "deadline": "2023-11-25",
     "priceRange": "$55,000 - $75,000 per year",
     "shortDescription": "Join our team as a backend developer to optimize our server infrastructure.",
-    "buyeremail": "buyer4@example.com"
+    "buyeremail": "buyer1@example.com"
   },
   {
     "jobCategory": "digitalMarketing",
@@ -37,7 +37,7 @@
     "deadline": "2023-12-05",
     "priceRange": "$40,000 - $60,000 per year",
     "shortDescription": "We're looking for a social media manager to create engaging content and manage our social accounts.",
-    "buyeremail": "buyer5@example.com"
+    "buyeremail": "buyer2@example.com"
   },
   {
     "jobCategory": "digitalMarketing",
@@ -45,7 +45,7 @@
     "deadline": "2023-11-28",
     "priceRange": "$50,000 - $70,000 per year",
     "shortDescription": "Join our team as an SEO specialist to improve our website's search engine ranking.",
-    "buyeremail": "buyer6@example.com"
+    "buyeremail": "buyer2@example.com"
   },
   {
     "jobCategory": "digitalMarketing",
@@ -53,7 +53,7 @@
     "deadline": "2023-12-10",
     "priceRange": "$45,000 - $65,000 per year",
     "shortDescription": "Seeking a content marketing manager to create and execute content strategies.",
-    "buyeremail": "buyer7@example.com"
+    "buyeremail": "buyer2@example.com"
   },
   {
     "jobCategory": "digitalMarketing",
@@ -61,7 +61,7 @@
     "deadline": "2023-11-25",
     "priceRange": "$35,000 - $55,000 per year",
     "shortDescription": "Coordinate and execute email marketing campaigns for our clients.",
-    "buyeremail": "buyer8@example.com"
+    "buyeremail": "buyer2@example.com"
   },
   {
     "jobCategory": "graphicDesign",
@@ -69,7 +69,7 @@
     "deadline": "2023-12-15",
     "priceRange": "$40,000 - $60,000 per year",
     "shortDescription": "Join our team as a graphic designer to create visually appealing marketing materials.",
-    "buyeremail": "buyer9@example.com"
+    "buyeremail": "buyer3@example.com"
   },
   {
     "jobCategory": "graphicDesign",
@@ -77,7 +77,7 @@
     "deadline": "2023-11-30",
     "priceRange": "$45,000 - $65,000 per year",
     "shortDescription": "We're looking for an illustrator to design unique artwork for our projects.",
-    "buyeremail": "buyer10@example.com"
+    "buyeremail": "buyer3@example.com"
   },
   {
     "jobCategory": "graphicDesign",
@@ -85,7 +85,7 @@
     "deadline": "2023-12-05",
     "priceRange": "$50,000 - $70,000 per year",
     "shortDescription": "Seeking a UI/UX designer to enhance the user experience of our applications.",
-    "buyeremail": "buyer11@example.com"
+    "buyeremail": "buyer3@example.com"
   },
   {
     "jobCategory": "graphicDesign",
@@ -93,6 +93,6 @@
     "deadline": "2023-11-28",
     "priceRange": "$35,000 - $55,000 per year",
     "shortDescription": "Design packaging materials for various products and brands.",
-    "buyeremail": "buyer12@example.com"
+    "buyeremail": "buyer3@example.com"
   }
 ]

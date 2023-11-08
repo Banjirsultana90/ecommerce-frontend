@@ -6,7 +6,7 @@ const Error = () => {
     return (
         <div className=''>
             <img className='mx-auto' src={img}alt="" />
-          <Link to='/'> <button>Back to home</button></Link>
+          <Link to='/'> <button className='px-10  mx-20 text-center bg-green-500 text-lg'>Back to home</button></Link>
 
 
            
@@ -15,4 +15,4 @@ const Error = () => {
     );
 };
 
-export default Error;
+export default Error; 

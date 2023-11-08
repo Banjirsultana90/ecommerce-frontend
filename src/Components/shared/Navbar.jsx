@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../provider/Authprovider';
+import img1 from '../../assets/branding-identity-corporate-people-point-logo-vector-design-template_460848-14010.jpg'
 
 
 
@@ -32,7 +33,8 @@ const Navbar = () => {
                         {nav}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <img className="rounded-full h-32 w-32 bg-slate-300" src={img1} alt="" />
+
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

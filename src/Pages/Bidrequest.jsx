@@ -5,31 +5,7 @@ import { useLoaderData } from 'react-router-dom';
 const Bidrequests = () => {
     const bidRequests = useLoaderData();
     const [requests, setRequests] = useState(bidRequests);
-
-    const handleAcceptClick = (requestId) => {
-        // Update the status of the bid request to 'In Progress' and hide buttons
-        const updatedRequests = requests.map((request) => {
-            if (request._id === requestId) {
-                return { ...request, status: 'In Progress' };
-            }
-            return request;
-        });
-
-        setRequests(updatedRequests);
-    };
-
-    const handleRejectClick = (requestId) => {
-        // Update the status of the bid request to 'Rejected' and hide buttons
-        const updatedRequests = requests.map((request) => {
-            if (request._id === requestId) {
-                return { ...request, status: 'Rejected' };
-            }
-            return request;
-        });
-
-        setRequests(updatedRequests);
-    };
-
+    
     return (
         <>
             <div className="overflow-x-auto">
@@ -60,22 +36,7 @@ const Bidrequests = () => {
                                 <td><button>Accept</button></td>
                                 <td><button>Reject</button></td>
                                 <td>
-                                    {request.status === 'Pending' && (
-                                        <>
-                                            <button
-                                                className='btn'
-                                                onClick={() => handleAcceptClick(request._id)}
-                                            >
-                                                Accept
-                                            </button>
-                                            <button
-                                                className='btn'
-                                                onClick={() => handleRejectClick(request._id)}
-                                            >
-                                                Reject
-                                            </button>
-                                        </>
-                                    )}
+                                  
                                 </td>
                             </tr>
                         ))}
