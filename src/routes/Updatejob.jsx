@@ -36,7 +36,7 @@ const Updatejob = () => {
         console.log('user?.email:', user?.email);
         console.log('jobs.email:', jobs.email);
 
-        if (user?.email === jobs.email) {fetch(`http://localhost:5000/addedjobs/${_id}`, {
+        if (user?.email === jobs.email) {fetch(`https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

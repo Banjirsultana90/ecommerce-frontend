@@ -23,7 +23,7 @@ const Navbar = () => {
             </>
 
     return (
-        <div className="navbar bg-base-200">
+        <div className="navbar bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
                         {nav}
                     </ul>
                 </div>
-                <img className="rounded-full h-32 w-32 border bg-slate-300" src={img1} alt="" />
+                <img className="rounded-full h-22 w-32 bg-slate-300" src={img1} alt="" />
 
             </div>
             <div className="navbar-center hidden lg:flex">

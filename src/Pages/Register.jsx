@@ -1,8 +1,9 @@
 import React, { useContext, useRef } from 'react';
-import {AuthContext} from '../components/provider/AuthProvider'
+
 import { Link } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 import Sociallogin from './Sociallogin';
+import { AuthContext } from '../Components/provider/Authprovider';
 
 const Register = () => {
     const { createuser ,handleupdateprofile} = useContext(AuthContext);

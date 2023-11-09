@@ -1,20 +1,105 @@
 
+// // import { useContext, useState } from "react";
+// // import toast, { Toaster } from "react-hot-toast";
+// // import { AuthContext } from "../Components/provider/Authprovider";
+// // import { Link, useLoaderData, } from "react-router-dom";
+// // import Swal from "sweetalert2";
+
+// // const Mypostedjob = () => {
+// //     const addedjob = useLoaderData();
+// //     const [jobs, setJobs] = useState(addedjob);
+// //     const { user } = useContext(AuthContext);
+// //     // const {_id}=useParams
+// //     // console.log(id)
+
+
+// //     const handleDelete = (id, email) => {
+// //         const proceed =   Swal.fire({
+// //             title: 'Are you sure you want to delete?',
+// //             text: 'This action cannot be undone.',
+// //             icon: 'warning',
+// //             showCancelButton: true,
+// //             confirmButtonColor: '#3085d6',
+// //             cancelButtonColor: '#d33',
+// //             confirmButtonText: 'Yes, delete it',
+// //             cancelButtonText: 'Cancel',
+// //         })
+// //         if (proceed) {
+// //             if (user?.email === email) {
+// //                 fetch(`http://localhost:5000/addedjobs/${id}`, {
+// //                     method: 'DELETE',
+// //                 })
+// //                     .then((res) => res.json())
+// //                     .then((data) => {
+// //                         if (data.deletedCount > 0) {
+// //                             Swal.fire({
+// //                                 icon: 'success',
+// //                                 title: 'Item has been deleted!',
+// //                                 showConfirmButton: false,
+// //                                 timer: 1500, // Auto-close after 1.5 seconds (adjust as needed)
+// //                             });
+// //                             // Update the state to remove the deleted job
+// //                             setJobs(jobs.filter((job) => job._id !== id));
+// //                         }
+// //                     });
+// //             } else {
+// //                 toast.error('You are not authorized to delete this job.');
+// //             }
+// //         }
+// //     };
+
+// //     return (
+// //         <>
+// //             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto p-10">
+// //             {jobs.map((job) => (
+// //                 <div key={job._id} className="card w-96 bg-base-100 shadow-xl  ">
+// //                     <div className="card-body">
+// //                         <h2>{job.email}</h2>
+// //                         <h2 className="card-title">{job.jobTitle}</h2>
+// //                         <p>{job.deadline}</p>
+// //                         <p>{job.shortDescription}</p>
+// //                         <p>{job.jobCategory}</p>
+// //                         <p>Maximum price{job.maximumprice}</p> 
+// //                         <p>Minimumprice{job.minimumprice}</p>
+// //                         <div className="card-actions justify-end">
+// //                             {user?.email === job.email && (
+// //                                 <button onClick={() => handleDelete(job._id, job.email)} className="btn bg-green-600 ">
+// //                                     Delete
+// //                                 </button>
+// //                             )}
+// //                             {/* <Link to={`/update/${job._id}`}><button className="btn btn-primary">Update</button></Link>
+// //                              */}
+// //                             {user?.email === job.email && (
+// //                                 <Link to={`/update/${job._id}`}>
+// //                                     <button className="btn  bg-green-600 ">Update</button>
+// //                                 </Link>
+// //                             )}
+
+// //                         </div>
+// //                     </div>
+// //                 </div>
+// //             ))}
+// //             </div>
+            
+// //             <Toaster />
+// //         </>
+// //     );
+// // };
+
+// // export default Mypostedjob;
 // import { useContext, useState } from "react";
 // import toast, { Toaster } from "react-hot-toast";
 // import { AuthContext } from "../Components/provider/Authprovider";
-// import { Link, useLoaderData, } from "react-router-dom";
+// import { Link, useLoaderData } from "react-router-dom";
 // import Swal from "sweetalert2";
 
 // const Mypostedjob = () => {
 //     const addedjob = useLoaderData();
 //     const [jobs, setJobs] = useState(addedjob);
 //     const { user } = useContext(AuthContext);
-//     // const {_id}=useParams
-//     // console.log(id)
-
 
 //     const handleDelete = (id, email) => {
-//         const proceed =   Swal.fire({
+//         Swal.fire({
 //             title: 'Are you sure you want to delete?',
 //             text: 'This action cannot be undone.',
 //             icon: 'warning',
@@ -23,71 +108,69 @@
 //             cancelButtonColor: '#d33',
 //             confirmButtonText: 'Yes, delete it',
 //             cancelButtonText: 'Cancel',
-//         })
-//         if (proceed) {
-//             if (user?.email === email) {
-//                 fetch(`http://localhost:5000/addedjobs/${id}`, {
-//                     method: 'DELETE',
-//                 })
-//                     .then((res) => res.json())
-//                     .then((data) => {
-//                         if (data.deletedCount > 0) {
-//                             Swal.fire({
-//                                 icon: 'success',
-//                                 title: 'Item has been deleted!',
-//                                 showConfirmButton: false,
-//                                 timer: 1500, // Auto-close after 1.5 seconds (adjust as needed)
-//                             });
-//                             // Update the state to remove the deleted job
-//                             setJobs(jobs.filter((job) => job._id !== id));
-//                         }
-//                     });
-//             } else {
-//                 toast.error('You are not authorized to delete this job.');
+//         }).then((result) => { // Use the result from the user's interaction
+//             if (result.isConfirmed) { // Check if the user clicked "Yes, delete it"
+//                 if (user?.email === email) {
+//                     fetch(`http://localhost:5000/addedjobs/${id}`, {
+//                         method: 'DELETE',
+//                     })
+//                         .then((res) => res.json())
+//                         .then((data) => {
+//                             if (data.deletedCount > 0) {
+//                                 Swal.fire({
+//                                     icon: 'success',
+//                                     title: 'Item has been deleted!',
+//                                     showConfirmButton: false,
+//                                     timer: 1500,
+//                                 });
+//                                 // Update the state to remove the deleted job
+//                                 setJobs(jobs.filter((job) => job._id !== id));
+//                             }
+//                         });
+//                 } else {
+//                     toast.error('You are not authorized to delete this job.');
+//                 }
 //             }
-//         }
+//         });
 //     };
 
 //     return (
 //         <>
-//             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto p-10">
-//             {jobs.map((job) => (
-//                 <div key={job._id} className="card w-96 bg-base-100 shadow-xl  ">
-//                     <div className="card-body">
-//                         <h2>{job.email}</h2>
-//                         <h2 className="card-title">{job.jobTitle}</h2>
-//                         <p>{job.deadline}</p>
-//                         <p>{job.shortDescription}</p>
-//                         <p>{job.jobCategory}</p>
-//                         <p>Maximum price{job.maximumprice}</p> 
-//                         <p>Minimumprice{job.minimumprice}</p>
-//                         <div className="card-actions justify-end">
-//                             {user?.email === job.email && (
-//                                 <button onClick={() => handleDelete(job._id, job.email)} className="btn bg-green-600 ">
-//                                     Delete
-//                                 </button>
-//                             )}
-//                             {/* <Link to={`/update/${job._id}`}><button className="btn btn-primary">Update</button></Link>
-//                              */}
-//                             {user?.email === job.email && (
-//                                 <Link to={`/update/${job._id}`}>
-//                                     <button className="btn  bg-green-600 ">Update</button>
-//                                 </Link>
-//                             )}
-
+//             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto p-10">
+//                 {jobs.map((job) => (
+//                     <div key={job._id} className="card w-96 bg-base-100 shadow-xl">
+//                         <div className="card-body">
+//                             <h2>{job.email}</h2>
+//                             <h2 className="card-title">{job.jobTitle}</h2>
+//                             <p>{job.deadline}</p>
+//                             <p>{job.shortDescription}</p>
+//                             <p>{job.jobCategory}</p>
+//                             <p>Maximum price: {job.maximumprice}</p>
+//                             <p>Minimum price: {job.minimumprice}</p>
+//                             <div className="card-actions justify-end">
+//                                 {user?.email === job.email && (
+//                                     <button onClick={() => handleDelete(job._id, job.email)} className="btn bg-green-600">
+//                                         Delete
+//                                     </button>
+//                                 )}
+//                                 {user?.email === job.email && (
+//                                     <Link to={`/update/${job._id}`}>
+//                                         <button className="btn bg-green-600">Update</button>
+//                                     </Link>
+//                                 )}
+//                             </div>
 //                         </div>
 //                     </div>
-//                 </div>
-//             ))}
+//                 ))}
 //             </div>
-            
 //             <Toaster />
 //         </>
 //     );
 // };
 
 // export default Mypostedjob;
-import { useContext, useState } from "react";
+
+import { useContext, useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../Components/provider/Authprovider";
 import { Link, useLoaderData } from "react-router-dom";
@@ -97,6 +180,9 @@ const Mypostedjob = () => {
     const addedjob = useLoaderData();
     const [jobs, setJobs] = useState(addedjob);
     const { user } = useContext(AuthContext);
+
+    // Filter the jobs based on the user's email
+    const userJobs = jobs.filter((job) => job.email === user.email);
 
     const handleDelete = (id, email) => {
         Swal.fire({
@@ -108,10 +194,10 @@ const Mypostedjob = () => {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it',
             cancelButtonText: 'Cancel',
-        }).then((result) => { // Use the result from the user's interaction
-            if (result.isConfirmed) { // Check if the user clicked "Yes, delete it"
+        }).then((result) => {
+            if (result.isConfirmed) {
                 if (user?.email === email) {
-                    fetch(`http://localhost:5000/addedjobs/${id}`, {
+                    fetch(`https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs/${id}`, {
                         method: 'DELETE',
                     })
                         .then((res) => res.json())
@@ -137,7 +223,7 @@ const Mypostedjob = () => {
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-10 mx-auto p-10">
-                {jobs.map((job) => (
+                {userJobs.map((job) => ( // Display only jobs added by the current user
                     <div key={job._id} className="card w-96 bg-base-100 shadow-xl">
                         <div className="card-body">
                             <h2>{job.email}</h2>
@@ -148,16 +234,12 @@ const Mypostedjob = () => {
                             <p>Maximum price: {job.maximumprice}</p>
                             <p>Minimum price: {job.minimumprice}</p>
                             <div className="card-actions justify-end">
-                                {user?.email === job.email && (
-                                    <button onClick={() => handleDelete(job._id, job.email)} className="btn bg-green-600">
-                                        Delete
-                                    </button>
-                                )}
-                                {user?.email === job.email && (
-                                    <Link to={`/update/${job._id}`}>
-                                        <button className="btn bg-green-600">Update</button>
-                                    </Link>
-                                )}
+                                <button onClick={() => handleDelete(job._id, job.email)} className="btn bg-green-600">
+                                    Delete
+                                </button>
+                                <Link to={`/update/${job._id}`}>
+                                    <button className="btn bg-green-600">Update</button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -169,4 +251,3 @@ const Mypostedjob = () => {
 };
 
 export default Mypostedjob;
-

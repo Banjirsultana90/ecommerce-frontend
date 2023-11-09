@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         {
             path:'/jobs/:id', 
             element:<Privateroute><Jobdetails></Jobdetails></Privateroute>,
-            loader:()=>fetch('http://localhost:5000/categories')
+            loader:()=>fetch('https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/categories')
            
     
         },
@@ -49,25 +49,25 @@ const router = createBrowserRouter([
         {
             path:'/mypostedjob',
             element:<Privateroute><Mypostedjob></Mypostedjob></Privateroute>,
-            loader:()=>fetch('http://localhost:5000/addedjobs')
+            loader:()=>fetch('https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs')
 
         },
         {
             path:'/update/:id',
             element:<Updatejob></Updatejob>,
-            loader:({params})=>fetch(`http://localhost:5000/addedjobs/${params.id}`)
+            loader:({params})=>fetch(`https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs/${params.id}`)
 
         },
         {
             path:'/mybids',
             element:<Privateroute><Mybids></Mybids></Privateroute>,
-            loader:()=>fetch('http://localhost:5000/bidedjobs')
+            loader:()=>fetch('https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/bidedjobs')
 
         },
         {
             path:'/bidrequest',
             element:<Privateroute><Bidrequest></Bidrequest></Privateroute>,
-            loader:()=>fetch('http://localhost:5000/bidedjobs')
+            loader:()=>fetch('https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/bidedjobs')
 
         }
       ]

@@ -24,7 +24,7 @@ const Addjob = () => {
         
         
      
-         fetch('http://localhost:5000/addedjobs',{
+         fetch('http://https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs',{
              method:'POST',
              headers:{
                "content-type":'application/json'

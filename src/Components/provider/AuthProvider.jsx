@@ -44,41 +44,7 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
-    // useEffect(() => {
-    //     const unsubscribe = onAuthStateChanged(auth, currentuser =>
-    //          {
-    //             const userEmail=currentuser?.email || user.email
-    //             const loggeduser={email:userEmail}
-    //             setuser(currentuser)
-    //         console.log('user in the auth state changed', currentuser);
-          
-    //         setloading(false)
-    //         if (currentuser){
-              
-    //             axios.post('http://localhost:5000/jwt',
-    //             loggeduser,{withCredentials:true})
-    //             .then(res=>{
-    //                 console.log ('token ressss',res.data)
-    //             })
-
-    //         }
-    //         else{
-    //             axios.post('http://localhost:5000/logout',
-    //             loggeduser,
-    //             {
-    //                 withCredentials:true
-    //             }
-    //             )
-    //             .then(res=>{
-    //                 console.log(res.data);
-    //             })
-    //         }
-    //     })
-    //     return () => {
-    //         unsubscribe()
-    //     }
-    // }, [])
-
+  
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentuser) => {
             const userEmail = currentuser?.email;
@@ -91,13 +57,13 @@ const AuthProvider = ({ children }) => {
             if (currentuser) {
                 
                 axios
-                    .post('http://localhost:5000/jwt', loggeduser, { withCredentials: true })
+                    .post('http://https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/jwt', loggeduser, { withCredentials: true })
                     .then((res) => {
                         console.log( res.data);
                     });
             } else {
                 axios
-                    .post('http://localhost:5000/logout', loggeduser, {
+                    .post('http:/https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/logout', loggeduser, {
                         withCredentials: true,
                     })
                     .then((res) => {
