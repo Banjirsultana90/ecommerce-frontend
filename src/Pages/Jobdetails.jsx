@@ -26,7 +26,7 @@ const Jobdetails = () => {
         // console.log(formdata);
 
        
-         fetch('https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/bidedjobs',{
+         fetch('https://ecommerce-project-server-dusky.vercel.app/bidedjobs',{
              method:'POST',
              headers:{
                "content-type":'application/json'

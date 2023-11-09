@@ -24,7 +24,7 @@ const Addjob = () => {
         
         
      
-         fetch('http://https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs',{
+         fetch('https://ecommerce-project-server-dusky.vercel.app/addedjobs',{
              method:'POST',
              headers:{
                "content-type":'application/json'
@@ -40,7 +40,8 @@ const Addjob = () => {
          })
         }
     return (
-        <div>
+        <div>  
+             <h2 className='text-center text-4xl font-extrabold my-5'> Add</h2>
             <div className='bg-[#F4F3F0] p-24'>
 
                 <form onSubmit={handleadd} >

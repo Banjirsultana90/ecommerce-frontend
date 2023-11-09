@@ -6,7 +6,7 @@ import Statistics from '../stat/Statistics';
 
 const Home = () => {
     return (
-        <div>
+        <div className='overflow-x-hidden'>
            <Banner></Banner>
            <MyTabs></MyTabs>
            <Popularcategories></Popularcategories>

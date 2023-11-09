@@ -10,7 +10,7 @@ const Mybids = () => {
 
 
     return (
-        <>
+        <>  <h2 className='text-center text-4xl font-extrabold my-5'> My Bids</h2>
             <div className="overflow-x-auto my-5">
                 <table className="table table-xs">
                     <thead>
@@ -30,16 +30,9 @@ const Mybids = () => {
                                 <td>{bid.title}</td>
                                 <td>{bid.email}</td>
                                 <td>{bid.deadline}</td>
-                                <td>{bid.status || 'Pending'}</td> {/* Display 'Pending' if status is not set */}
+                                <td>{bid.status || 'Pending'}</td> 
                                 <td>
-                                    {/* {bid.status === 'Pending' && (
-                                        <button
-                                            className='btn'
-                                            onClick={() => handleCompleteClick(bid._id)}
-                                        >
-                                            Complete
-                                        </button>
-                                    )} */}
+                                    
                                 </td>
                             </tr>
                         ))}

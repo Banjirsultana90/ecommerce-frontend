@@ -57,13 +57,13 @@ const AuthProvider = ({ children }) => {
             if (currentuser) {
                 
                 axios
-                    .post('http://https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/jwt', loggeduser, { withCredentials: true })
+                    .post('https://ecommerce-project-server-dusky.vercel.app/jwt', loggeduser, { withCredentials: true })
                     .then((res) => {
                         console.log( res.data);
                     });
             } else {
                 axios
-                    .post('http:/https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/logout', loggeduser, {
+                    .post('http:/https://ecommerce-project-server-dusky.vercel.app/logout', loggeduser, {
                         withCredentials: true,
                     })
                     .then((res) => {

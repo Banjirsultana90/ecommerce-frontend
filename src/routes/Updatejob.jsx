@@ -2,10 +2,11 @@
 import React, { useContext } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { AuthContext } from '../Components/provider/Authprovider';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Updatejob = () => {
     const { user, email } = useContext(AuthContext);
+    const navigate=useNavigate()
     // console.log(user?.email);
     const jobs = useLoaderData();
     console.log(jobs);
@@ -36,12 +37,12 @@ const Updatejob = () => {
         console.log('user?.email:', user?.email);
         console.log('jobs.email:', jobs.email);
 
-        if (user?.email === jobs.email) {fetch(`https://ecommerce-project-server-1mpm6vxrp-banjir-sultanas-projects.vercel.app/addedjobs/${_id}`, {
+        if (user?.email === jobs.email) {fetch(`https://ecommerce-project-server-dusky.vercel.app/addedjobs/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            credentials: 'include', // Include credentials here
+            credentials: 'include', 
             body: JSON.stringify(updatedjob),
         })
         .then((res) => res.json())
@@ -49,11 +50,11 @@ const Updatejob = () => {
             if (value.modifiedCount > 0) {
                 toast.success('Job updated successfully');
             }
-            // You can add navigation code here
+            navigate('/mypostedjob')
         });
         
 
-            // fetch(`http://localhost:5000/addedjobs/${_id}`, { credentials: 'include' }, {
+            // fetch(`localhost:5000/addedjobs/${_id}`, { credentials: 'include' }, {
             //     method: 'PUT',
             //     headers: {
             //         'Content-Type': 'application/json',
