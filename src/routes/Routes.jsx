@@ -68,6 +68,7 @@ const router = createBrowserRouter([
             path:'/bidrequest',
             element:<Privateroute><Bidrequest></Bidrequest></Privateroute>,
             loader:()=>fetch('https://ecommerce-project-server-dusky.vercel.app/bidedjobs')
+         
 
         }
       ]

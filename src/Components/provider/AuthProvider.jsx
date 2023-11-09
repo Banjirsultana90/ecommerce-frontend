@@ -63,7 +63,7 @@ const AuthProvider = ({ children }) => {
                     });
             } else {
                 axios
-                    .post('http:/https://ecommerce-project-server-dusky.vercel.app/logout', loggeduser, {
+                    .post('https://ecommerce-project-server-dusky.vercel.app/logout', loggeduser, {
                         withCredentials: true,
                     })
                     .then((res) => {
