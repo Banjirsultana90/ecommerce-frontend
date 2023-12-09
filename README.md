@@ -1,3 +1,12 @@
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Node.js
+- MongoDB
+
 ***Project setup: I have used express js for serversite operation and used mongodb for database and use react for fronend operation. and I have used Tailwind for css.and firebase for authentication.
 
  ****User Authentication: Implement user registration and login functionality to allow users to create accounts and securely log in. 
